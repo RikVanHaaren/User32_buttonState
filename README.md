@@ -22,6 +22,19 @@ using System.Runtime.InteropServices;
 [System.Runtime.InteropServices.DllImport("USER32.dll")]
 ```
 
+**Example**
+```
+// Import P/Invoke
+[DllImport("USER32.dll")]
+static extern short GetKeyState(int nVirtKey);
+
+while (true) {
+    if(Convert.ToBoolean(GetKeyState(0x20) & 0x8000)) 
+        Console.WriteLine("Spacebar is pressed down!");
+}
+```
+*Note: The a look at the [Project](https://github.com/RikVanHaaren/User32_buttonState/tree/main/User32_buttonState)  so you can include the virtual keys by enum.*
+
 
 ## Resoures
 [Virtual-key Codes](https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes) •

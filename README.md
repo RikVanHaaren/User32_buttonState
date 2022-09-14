@@ -1,5 +1,5 @@
 # User32_buttonState
-.NET console application, button state via user32.dll
+.NET 6.0 console application, button state via user32.dll
 
 
 ## Problem
